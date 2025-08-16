@@ -7,6 +7,9 @@
     "test": "test"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/ios": "^7.4.2",
     "abort-controller": "^3.0.0",
     "agent-base": "^7.1.4",
     "ajv": "^8.17.1",
@@ -502,6 +505,7 @@
   "devDependencies": {
     "@aws-amplify/backend": "^1.16.1",
     "@aws-amplify/backend-cli": "^1.8.0",
+    "@capacitor/cli": "^7.4.2",
     "aws-cdk-lib": "^2.204.0",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.9",
