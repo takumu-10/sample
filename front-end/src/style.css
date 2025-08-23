@@ -1,79 +1,29 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+:root{
+  --brand-purple: #7c3aed;                /* お好みで調整（Tailwindのviolet-600相当） */
+  --brand-purple-press: #6d28d9;          /* 押下時の濃いめ */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --tab-bg-active: var(--brand-purple);   /* アクティブ背景：紫 */
+  --tab-fg-active: #ffffff;               /* アクティブ文字：白 */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --tab-bg-inactive: #ffffff;             /* 非アクティブ背景：白 */
+  --tab-fg-inactive: var(--brand-purple); /* 非アクティブ文字：紫 */
+  /* フッター本体高さ（パディング除く） */
+  --bottom-nav-height: 64px;
+  /* パディングを含む実効高さ（main の下余白用） */
+  --bottom-nav-total-height: calc(var(--bottom-nav-height) + max(8px, env(safe-area-inset-bottom)));
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* { box-sizing: border-box; }
+html, body, #app {
+  height: 100%;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
+/* 開発時に“スマホ幅”で見たい場合は任意でラップ */
+.dev-mobile {
+  max-width: 430px; /* iPhone 15 Pro Max 程度 */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  border: 1px solid #e5e7eb;
 }
