@@ -6,7 +6,7 @@
         class="tab"
         :class="{ active: currentTab === 'map' }"
         role="tab"
-        :aria-selected="currentTab === 'map'"
+        aria-selected="currentTab === 'map'"
         @click="currentTab = 'map'"
       >
         地図
@@ -15,7 +15,7 @@
         class="tab"
         :class="{ active: currentTab === 'profile' }"
         role="tab"
-        :aria-selected="currentTab === 'profile'"
+        aria-selected="currentTab === 'profile'"
         @click="currentTab = 'profile'"
       >
         プロフィール
@@ -40,15 +40,12 @@
 import MapTab from '../components/MapTab.vue'
 import ProfileTab from '../components/ProfileTab.vue'
 import { useRouter } from 'vue-router'
-import { ref } from 'vue'
 
 export default {
   name: 'SearchView',
   components: { MapTab, ProfileTab },
   setup() {
     const router = useRouter()
-
-    const currentTab = ref('map')
 
     // ★ サンプルデータ（後でAPI連携に差し替え可）
     const groups = [
@@ -65,7 +62,7 @@ export default {
     }
 
     return {
-      currentTab,
+      currentTab: 'map',
       groups,
       goToMessage,
     }
