@@ -1,12 +1,12 @@
 <template>
-  <Authenticator>
+  <!-- <Authenticator>
     <template #default="{ user, signOut }">
       <main style="padding:24px">
         <h1>Hi, 長袖をください{{ user?.username }}</h1>
         <button @click="signOut">Sign out</button>
       </main>
     </template>
-  </Authenticator>
+  </Authenticator> -->
   <div class="app">
     <header class="app-header">
       <h1>{{ currentTitle }}</h1>
@@ -29,7 +29,7 @@ const route = useRoute()
 const titles = {
   home: 'ホーム',
   groupRegister: 'グループ登録',
-  search: '探す',
+  search: '探',
   messages: 'メッセージ',
   mypage: 'マイページ',
 }
