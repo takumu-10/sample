@@ -1,0 +1,7 @@
+.amplify/
+amplify/
+**/cdk.out/
+**/*.tsbuildinfo
+node_modules/
+dist/
+.env
