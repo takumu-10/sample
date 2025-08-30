@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "@capacitor/android": "^7.4.2",
+    "@capacitor/android": "^7.4.3",
     "@capacitor/core": "^7.4.2",
     "@capacitor/ios": "^7.4.2",
     "abort-controller": "^3.0.0",
@@ -473,6 +473,7 @@
     "util-deprecate": "^1.0.2",
     "uuid": "^11.1.0",
     "value-or-promise": "^1.0.12",
+    "vue-router": "^4.5.1",
     "wcwidth": "^1.0.1",
     "web-streams-polyfill": "^3.3.3",
     "webidl-conversions": "^3.0.1",
@@ -506,7 +507,7 @@
     "@aws-amplify/backend": "^1.16.1",
     "@aws-amplify/backend-cli": "^1.8.0",
     "@aws-amplify/cli": "^14.0.0",
-    "@capacitor/cli": "^7.4.2",
+    "@capacitor/cli": "^7.4.3",
     "aws-cdk-lib": "^2.204.0",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.9",
