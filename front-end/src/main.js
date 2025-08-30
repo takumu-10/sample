@@ -30,7 +30,7 @@ import App from './App.vue'
 import router from './router'
 import { Amplify } from 'aws-amplify'
 import outputs from '../../amplify_outputs.json'   // ← sample/front-end/src からの相対
-import './style.css'
+import './shared/style.css'
 
 Amplify.configure(outputs)
 
