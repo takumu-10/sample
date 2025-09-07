@@ -1,32 +1,18 @@
 const express = require('express');
 const app = express();
-const port = 3001; // フロントエンドとポートを分ける
+const port = 3001;
 
-// CORSを有効にするためのパッケージ
 const cors = require('cors'); 
-// ステップ2で作成したデータベース接続設定をインポート
-const db = require('./config/db');
+
+// 新しく作成したルートファイルをインポート
+const messageRoutes = require('./routes/messageRoutes');
 
 // ミドルウェアの適用
 app.use(express.json());
-app.use(cors()); // CORSミドルウェアを適用
+app.use(cors());
 
-// /api/messages エンドポイント
-// フロントエンドの要求に合わせて、このエンドポイントでメッセージデータを返します。
-app.get('/api/messages', (req, res) => {
-  // ----------------------------------------------------
-  const sql = 'SELECT text, sender FROM messages ORDER BY timestamp ASC';
-  db.query(sql, (err, results) => {
-    if (err) {
-      // エラーが発生した場合
-      console.error('Error fetching messages from database:', err);
-      res.status(500).send('Error fetching data.');
-      return;
-    }
-// 成功した場合、取得したデータをJSON形式で返します
-    res.json(results);
-  });
-});
+// /apiパスに、メッセージ関連のルートを適用
+app.use('/api', messageRoutes);
 
 // サーバーの起動
 app.listen(port, () => {
